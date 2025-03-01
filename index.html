@@ -1,38 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOMÁS OLIVEIRA</title>
+    <title>Tomás Oliveira</title>
     <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#music">Música</a></li>
-                <li><a href="#tour">Concertos</a></li>
-                <li><a href="#tour">A Banda</a></li>
-                <li><a href="#contact">Acerca</a></li>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <img src="assets/logo-branco-solo.png" alt="Tomás Oliveira">
+            </a>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero">INÍCIO</a></li>
+                <li><a href="#concertos">CONCERTOS</a></li>
+                <li><a href="#musica">MÚSICA</a></li>
+                <li><a href="#banda">BANDA</a></li>
+                <li><a href="#loja">LOJA</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
             </ul>
-        </nav>
+        </div>
+        </section>
     </header>
 
-    <section id="home" class="hero">
-        <div class="content">
-            <h1>Tomás Oliveira</h1>
-            <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">Spotify</a>
-                <a href="#" target="_blank">YouTube</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <img src="assets/edit12.jpg" alt="Tomás Oliveira" class="hero-bg">
+        <div class="hero-content">
+
+        </div>
+    </section>
+
+    <!-- Próximos Concertos -->
+    <section id="concertos">
+        <div class="container">
+            <h2 class="section-title">PRÓXIMOS CONCERTOS</h2>
+            <div class="concertos-list">
+                <div class="concerto-item">
+                    <div class="concerto-data">
+                        <div class="dia">TBD</div>
+                        <div class="mes">TBD</div>
+                    </div>
+                    <div class="concerto-info">
+                        <div class="concerto-local">Por Anunciar</div>
+                        <div class="concerto-cidade">Portugal</div>
+                    </div>
+                    <div class="concerto-btn">
+                        <a href="#" class="btn">BILHETES</a>
+                    </div>
+                </div>
+                <div class="concerto-item">
+                    <div class="concerto-data">
+                        <div class="dia">TBD</div>
+                        <div class="mes">TBD</div>
+                    </div>
+                    <div class="concerto-info">
+                        <div class="concerto-local">Por Anunciar</div>
+                        <div class="concerto-cidade">Portugal</div>
+                    </div>
+                    <div class="concerto-btn">
+                        <a href="#" class="btn">BILHETES</a>
+                    </div>
+                </div>
+                <div class="concerto-item">
+                    <div class="concerto-data">
+                        <div class="dia">TBD</div>
+                        <div class="mes">TBD</div>
+                    </div>
+                    <div class="concerto-info">
+                        <div class="concerto-local">Por Anunciar</div>
+                        <div class="concerto-cidade">Portugal</div>
+                    </div>
+                    <div class="concerto-btn">
+                        <a href="#" class="btn">BILHETES</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Música (ATUALIZADO) -->
+    <section id="musica">
+        <div class="container">
+            <h2 class="section-title">MÚSICA</h2>
+            <div class="albums-list">
+                <div class="album-item">
+                    <div class="album-cover">
+                        <img src="assets/lamire.jpg" alt="Lamiré">
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">LAMIRÉ</h3>
+                        <p class="album-year">Álbum, 2023</p>
+                        <p class="album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                        <div class="album-links">
+                            <a href="#" class="btn">OUVIR</a>
+                            <a href="#" class="btn">LETRAS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-item">
+                    <div class="album-cover">
+                        <img src="assets/fdc.jpg" alt="Fora da Caixa">
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">FORA DA CAIXA</h3>
+                        <p class="album-year">EP, 2022</p>
+                        <p class="album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                        <div class="album-links">
+                            <a href="#" class="btn">OUVIR</a>
+                            <a href="#" class="btn">LETRAS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="album-item">
+                    <div class="album-cover">
+                        <img src="assets/sindroma.jpg" alt="Síndroma">
+                    </div>
+                    <div class="album-info">
+                        <h3 class="album-title">SÍNDROMA</h3>
+                        <p class="album-year">EP, 2020</p>
+                        <p class="album-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                        <div class="album-links">
+                            <a href="#" class="btn">OUVIR</a>
+                            <a href="#" class="btn">LETRAS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banda (ATUALIZADO) -->
+    <section id="banda">
+        <div class="container">
+            <h2 class="section-title">BANDA</h2>
+            <div class="banda-list">
+                <div class="membro-item">
+                    <div class="membro-foto">
+                        <img src="assets/francisca.jpg" alt="Francisca Reis">
+                    </div>
+                    <div class="membro-info">
+                        <h3 class="membro-nome">Francisca Reis</h3>
+                        <p class="membro-funcao">Bateria & Percussão</p>
+                        <p class="membro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a. </p>
+                    </div>
+                </div>
+
+                <div class="membro-item">
+                    <div class="membro-foto">
+                        <img src="assets/helder.jpg" alt="Helder Fonte">
+                    </div>
+                    <div class="membro-info">
+                        <h3 class="membro-nome">Helder Fonte</h3>
+                        <p class="membro-funcao">Guitarra Elétrica</p>
+                        <p class="membro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                    </div>
+                </div>
+
+                <div class="membro-item">
+                    <div class="membro-foto">
+                        <img src="assets/mariana.jpg" alt="Mariana Costa">
+                    </div>
+                    <div class="membro-info">
+                        <h3 class="membro-nome">Mariana Costa</h3>
+                        <p class="membro-funcao">Piano & teclados</p>
+                        <p class="membro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                    </div>
+                </div>
+
+                <div class="membro-item">
+                    <div class="membro-foto">
+                        <img src="assets/tiago.jpg" alt="Tiago Ferreira">
+                    </div>
+                    <div class="membro-info">
+                        <h3 class="membro-nome">Tiago Ferreira</h3>
+                        <p class="membro-funcao">Baixo</p>
+                        <p class="membro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget fermentum erat. Duis commodo dui ac dui sollicitudin porttitor. Aenean pharetra lobortis lectus, vel pretium enim ornare a.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Loja -->
+    <section id="loja">
+        <div class="container">
+            <h2 class="section-title">LOJA</h2>
+            <div class="produtos-grid">
+                <div class="produto">
+                    <img src="assets/loja/cd-lamire.jpg" alt="Produto 1" class="produto-img">
+                    <h3 class="produto-nome">CD "Lamiré" - Edição Especial</h3>
+                    <p class="produto-preco">€15.00</p>
+                    <a href="#" class="btn">COMPRAR</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">SOBRE</h2>
+            <div class="sobre-conteudo">
+                <div class="sobre-foto">
+                    <img src="assets/concerto.jpg" alt="Tomás Oliveira">
+                </div>
+                <div class="sobre-texto">
+                    <p>Tomás Oliveira é um músico, compositor e produtor natural de Viseu, que assume o papel de multi-instrumentista neste projeto em nome próprio. A sua música manifesta-se demasiado eclética para rotular, mas facilmente se caracteriza
+                        pela combinação cuidadosa de uma instrumentação orgânica e acústica com elementos eletrónicos - resultando numa sonoridade pop/rock única e distinta.</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="footer-texto">© 2025 Tomás Oliveira. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

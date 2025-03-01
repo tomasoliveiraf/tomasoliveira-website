@@ -1,36 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Elinga';
+    src: url('../assets/fonts/Elinga.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Condensed';
+    src: url('../assets/fonts/Archivo_Condensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Condensed';
+    src: url('../assets/fonts/Archivo_Condensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Condensed';
+    src: url('../assets/fonts/Archivo_Condensed-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Archivo Expanded */
+
+@font-face {
+    font-family: 'Archivo Expanded';
+    src: url('../assets/fonts/Archivo_Expanded-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Expanded';
+    src: url('../assets/fonts/Archivo_Expanded-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo Expanded';
+    src: url('../assets/fonts/Archivo_Expanded-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Archivo SemiExpanded */
+
+@font-face {
+    font-family: 'Archivo SemiExpanded';
+    src: url('../assets/fonts/Archivo_SemiExpanded-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo SemiExpanded';
+    src: url('../assets/fonts/Archivo_SemiExpanded-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo SemiExpanded';
+    src: url('../assets/fonts/Archivo_SemiExpanded-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Archivo SemiCondensed */
+
+@font-face {
+    font-family: 'Archivo SemiCondensed';
+    src: url('../assets/fonts/Archivo_SemiCondensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo SemiCondensed';
+    src: url('../assets/fonts/Archivo_SemiCondensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo SemiCondensed';
+    src: url('../assets/fonts/Archivo_SemiCondensed-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Archivo ExtraCondensed */
+
+@font-face {
+    font-family: 'Archivo ExtraCondensed';
+    src: url('../assets/fonts/Archivo_ExtraCondensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo ExtraCondensed';
+    src: url('../assets/fonts/Archivo_ExtraCondensed-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Archivo ExtraCondensed';
+    src: url('../assets/fonts/Archivo_ExtraCondensed-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* Estilos gerais */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Archivo SemiExpanded Regular', 'Archivo SemiExpanded', Arial, sans-serif;
 }
 
 body {
-    background: #2e2e2e;
-    height: 100vh;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Header e navegação */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.hero {
-    text-align: center;
-    color: white;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.hero h1 {
-    font-size: 4rem;
+.logo img {
+    height: 50px;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    position: relative;
+    padding: 5px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover:after {
+    width: 100%;
+}
+
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 300px;
     margin-bottom: 20px;
 }
 
+.hero-title {
+    font-size: 72px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Próximos Concertos */
+
+#concertos {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.concertos-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.concerto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.concerto-data {
+    flex: 0 0 120px;
+}
+
+.concerto-data .dia {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.concerto-data .mes {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.concerto-info {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.concerto-local {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.concerto-cidade {
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.concerto-btn {
+    flex: 0 0 120px;
+}
+
+
+/* Música - ATUALIZADO */
+
+#musica {
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+.albums-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.album-item {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.album-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.album-cover {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.album-item:hover .album-cover img {
+    transform: scale(1.05);
+}
+
+.album-info {
+    flex: 0 0 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.album-year {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.album-description {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.album-links {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* Banda - ATUALIZADO */
+
+#banda {
+    padding: 100px 0;
+}
+
+.banda-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.membro-item {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.membro-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.membro-foto {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.membro-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.membro-item:hover .membro-foto img {
+    transform: scale(1.05);
+}
+
+.membro-info {
+    flex: 0 0 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.membro-nome {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.membro-funcao {
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.membro-bio {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+
+/* Loja */
+
+#loja {
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.produto {
+    text-align: center;
+}
+
+.produto-img {
+    width: 100%;
+    aspect-ratio: 4/4;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.produto-nome {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.produto-preco {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* Sobre */
+
+#sobre {
+    padding: 100px 0;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre-foto {
+    flex: 0 0 40%;
+}
+
+.sobre-foto img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.sobre-texto {
+    flex: 0 0 60%;
+}
+
+.sobre-texto p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 50px 0;
+    background-color: #000;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
 .social-links a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin: 0 10px;
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.footer-texto {
     opacity: 0.7;
+    font-size: 14px;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 992px) {
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre-foto {
+        flex: 0 0 100%;
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+    .sobre-texto {
+        flex: 0 0 100%;
+    }
+    .album-item,
+    .membro-item {
+        flex-direction: column !important;
+    }
+    .album-cover,
+    .album-info,
+    .membro-foto,
+    .membro-info {
+        flex: 0 0 100%;
+    }
+    .album-info,
+    .membro-info {
+        padding: 30px;
+    }
+    .album-cover img,
+    .membro-foto img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+    }
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        transition: right 0.3s ease;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    .concerto-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .concerto-data,
+    .concerto-info,
+    .concerto-btn {
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+    }
+    .album-title,
+    .membro-nome {
+        font-size: 24px;
+    }
+    .album-year,
+    .membro-funcao {
+        font-size: 16px;
+    }
+    .album-description,
+    .membro-bio {
+        font-size: 14px;
+    }
 }
