@@ -442,6 +442,11 @@ header.scrolled {
     margin: 0 auto;
 }
 
+.banda-texto {
+    text-align: center;
+    padding: 0 9% 5% 9%;
+}
+
 .membro-item {
     display: flex;
     margin-bottom: 80px;
