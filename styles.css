@@ -352,6 +352,16 @@ header.scrolled {
     opacity: 0.7;
 }
 
+.concerto-nota {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.concerto-nota p {
+    font-style: italic;
+    opacity: 0.8;
+}
+
 .concerto-btn {
     flex: 0 0 120px;
 }
@@ -684,20 +694,27 @@ footer {
     }
     .concerto-data,
     .concerto-info,
+    .concerto-nota,
     .concerto-btn {
         flex: 0 0 100%;
         margin-bottom: 15px;
     }
-    .album-title,
-    .membro-nome {
-        font-size: 24px;
-    }
-    .album-year,
-    .membro-funcao {
-        font-size: 16px;
-    }
-    .album-description,
-    .membro-bio {
-        font-size: 14px;
-    }
+}
+
+.album-title,
+.membro-nome {
+    font-size: 24px;
+}
+
+.album-year,
+.membro-funcao {
+    font-size: 16px;
+}
+
+.album-description,
+.membro-bio {
+    font-size: 14px;
+}
+
+
 }
