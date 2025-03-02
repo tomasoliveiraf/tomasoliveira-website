@@ -232,6 +232,27 @@ header.scrolled {
     width: 100%;
 }
 
+.page-header {
+    padding-top: 150px;
+    /* Espaço para o header fixo */
+    padding-bottom: 30px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.page-section {
+    padding: 50px 0 100px;
+    /* Reduzido de 150px para 50px no topo */
+}
+
+
+/* Para a página Sobre que não tem page-header */
+
+body:not(.page-content) .page-section {
+    padding-top: 150px;
+    /* Mais espaço no topo para compensar a ausência do page-header */
+}
+
 
 /* Hero Section */
 
@@ -366,6 +387,43 @@ header.scrolled {
     flex: 0 0 120px;
 }
 
+#contacto {
+    padding: 100px 0;
+    background-color: #0a0a0a;
+}
+
+.contactos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacto-item {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contacto-tipo {
+    font-size: 24px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contacto-info {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
 
 /* Música - ATUALIZADO */
 
@@ -445,6 +503,33 @@ header.scrolled {
 
 #banda {
     padding: 100px 0;
+}
+
+.banda-hero-image {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+    /* Vai ficar logo abaixo do page-header */
+    height: auto;
+    /* Ajuste a altura conforme necessário */
+    position: relative;
+}
+
+.banda-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a imagem cubra bem o espaço */
+    object-position: center;
+    /* Centraliza a imagem */
+}
+
+
+/* Ajuste o espaçamento da seção da banda quando tiver a imagem de destaque */
+
+.banda-hero-image+#banda.page-section {
+    padding-top: 50px;
+    /* Reduz o padding superior da seção quando há imagem */
 }
 
 .banda-list {
@@ -552,28 +637,38 @@ header.scrolled {
 /* Sobre */
 
 #sobre {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .sobre-conteudo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    max-width: 1000px;
+    gap: 30px;
+    max-width: 1400px;
     margin: 0 auto;
+    text-align: justify;
 }
 
 .sobre-foto {
-    flex: 0 0 40%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+    /* Vai ficar logo abaixo do page-header */
+    height: auto;
+    /* Ajuste a altura conforme necessário */
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .sobre-foto img {
     width: 100%;
     object-fit: cover;
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);*/
 }
 
 .sobre-texto {
-    flex: 0 0 60%;
+    width: 100%;
 }
 
 .sobre-texto p {
@@ -698,6 +793,12 @@ footer {
     .concerto-btn {
         flex: 0 0 100%;
         margin-bottom: 15px;
+    }
+    .contactos-grid {
+        grid-template-columns: 1fr;
+    }
+    .sobre-texto p {
+        font-size: 16px;
     }
 }
 

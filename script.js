@@ -13,18 +13,34 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Header com background ao scrollar
+// Header com background ao scrollar (agora apenas para a página principal)
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    header.classList.toggle('scrolled', window.scrollY > 100);
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.includes('index')) {
+        header.classList.toggle('scrolled', window.scrollY > 100);
+    }
 });
 
-// Scroll suave para as seções
+// Scroll suave apenas para as seções na página principal
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        // Verificar se o link é para uma seção na página atual
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#') && document.querySelector(targetId)) {
+            e.preventDefault();
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
+});
+
+// Ao carregar a página, adicionar classe 'scrolled' ao header nas páginas secundárias
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    if (window.location.pathname !== '/' &&
+        window.location.pathname !== '/index.html' &&
+        !window.location.pathname.includes('index')) {
+        header.classList.add('scrolled');
+    }
 });
