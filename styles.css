@@ -538,7 +538,7 @@ body:not(.page-content) .page-section {
 }
 
 .banda-texto {
-    text-align: center;
+    text-align: justify;
     padding: 0 9% 5% 9%;
 }
 
@@ -720,7 +720,7 @@ footer {
 @media (max-width: 992px) {
     .sobre-conteudo {
         flex-direction: column;
-        text-align: center;
+        text-align: justify;
     }
     .sobre-foto {
         flex: 0 0 100%;
