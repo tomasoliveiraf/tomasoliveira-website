@@ -160,11 +160,70 @@ header {
     width: 100%;
     padding: 20px 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: transparent;
 }
+
+
+/* Quando faz scroll: fundo preto e texto branco */
 
 header.scrolled {
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Texto cinza escuro por padrão (apenas na página principal) */
+
+header .nav-menu a,
+header .logo {
+    color: #2a2a2a;
+    transition: color 0.3s ease;
+}
+
+
+/* Logo em cinza escuro por padrão */
+
+header .logo img {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
+    transition: filter 0.3s ease;
+}
+
+
+/* Quando faz scroll: texto branco */
+
+header.scrolled .nav-menu a,
+header.scrolled .logo {
+    color: #ffffff;
+}
+
+
+/* Quando faz scroll: logo branco (remove o filtro) */
+
+header.scrolled .logo img {
+    filter: none;
+}
+
+
+/* Hamburger menu também muda de cor */
+
+header .nav-toggle span {
+    background-color: #2a2a2a;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled .nav-toggle span {
+    background-color: #ffffff;
+}
+
+
+/* Efeito hover no menu - adaptado para ambos os estados */
+
+header .nav-menu a:after {
+    background-color: #2a2a2a;
+}
+
+header.scrolled .nav-menu a:after {
+    background-color: #ffffff;
 }
 
 .header-content {
@@ -273,12 +332,93 @@ body:not(.page-content) .page-section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 60%;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
+}
+
+
+/* Destaque Pre-Save */
+
+.hero-presave {
+    position: absolute;
+    left: 8%;
+    top: 55%;
+    /* Mudado de 50% para 55% - desce o card */
+    transform: translateY(-50%);
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    /* Reduzido de 30px para 25px */
+    border-radius: 8px;
+    max-width: 300px;
+    /* Reduzido de 350px para 300px */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+    /* Alinha tudo ao centro */
+}
+
+.hero-presave:hover {
+    transform: translateY(-50%) scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
+}
+
+.presave-cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 15px;
+    /* Reduzido de 20px */
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.presave-title {
+    text-align: center;
+    font-size: 22px;
+    /* Reduzido de 24px */
+    font-weight: bold;
+    margin-bottom: 2px;
+    /* Reduzido de 8px */
+    letter-spacing: 1px;
+}
+
+.presave-artist {
+    text-align: center;
+    font-size: 15px;
+    /* Reduzido de 16px */
+    opacity: 0.8;
+    margin-bottom: 18px;
+    /* Reduzido de 20px */
+}
+
+.presave-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    /* Reduzido de 15px */
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    /* Reduzido de 16px */
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.presave-btn:hover {
+    background-color: transparent;
+    color: #fff;
 }
 
 .hero-logo {
@@ -781,6 +921,21 @@ footer {
     }
     .nav-menu li {
         margin: 15px 0;
+    }
+    .hero-presave {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 85%;
+        padding: 25px;
+    }
+    .hero-presave:hover {
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+    .presave-title {
+        font-size: 20px;
+    }
+    .presave-artist {
+        font-size: 14px;
     }
     .concerto-item {
         flex-direction: column;

@@ -38,6 +38,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Ao carregar a página, adicionar classe 'scrolled' ao header nas páginas secundárias
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
+    // Nas páginas secundárias, mantém sempre o estilo 'scrolled' (fundo preto + texto branco)
     if (window.location.pathname !== '/' &&
         window.location.pathname !== '/index.html' &&
         !window.location.pathname.includes('index')) {
