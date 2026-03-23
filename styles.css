@@ -221,9 +221,10 @@ header.scrolled .nav-toggle span {
 
 /* Efeito hover no menu - adaptado para ambos os estados */
 
-header .nav-menu a:after {
+
+/*header .nav-menu a:after {
     background-color: #2a2a2a;
-}
+}*/
 
 header.scrolled .nav-menu a:after {
     background-color: #ffffff;
