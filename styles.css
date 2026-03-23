@@ -174,19 +174,21 @@ header.scrolled {
 
 /* Texto cinza escuro por padrão (apenas na página principal) */
 
-header .nav-menu a,
+
+/*header .nav-menu a,
 header .logo {
     color: #2a2a2a;
     transition: color 0.3s ease;
-}
+}*/
 
 
 /* Logo em cinza escuro por padrão */
 
-header .logo img {
+
+/*header .logo img {
     filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
     transition: filter 0.3s ease;
-}
+}*/
 
 
 /* Quando faz scroll: texto branco */
@@ -206,10 +208,11 @@ header.scrolled .logo img {
 
 /* Hamburger menu também muda de cor */
 
-header .nav-toggle span {
+
+/*header .nav-toggle span {
     background-color: #2a2a2a;
     transition: background-color 0.3s ease;
-}
+}*/
 
 header.scrolled .nav-toggle span {
     background-color: #ffffff;
